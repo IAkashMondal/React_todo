@@ -12,17 +12,14 @@ const Todo = () => {
         setConsoleValue(e.target.value) ;     
     }
 
-    let onDelete = (id) => {
-        let newTodo = todo.filter(pros => pros.id !== id)
-        setTodo(newTodo)
-    }
+    // let onDelete = (id) => {
+    //     let newTodo = todo.filter(pros => pros.id !== id)
+    //     setTodo(newTodo)
+    // }
 
 return(
     <div className={styles.background}>   
-        {todo.map((pros)=> (
-           <Todoitems key={pros.id} pros={pros} onDelete={onDelete}/>
-          
-        ))}
+      <Todoitems />
         
         <input className={styles.inputt} value={consoleValue} onChange={inputValue} type="text" placeholder="Write Something" />
         <button className={styles.addbt}
